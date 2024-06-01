@@ -1,9 +1,7 @@
 { 
     "version": 2,
-     "rewrites": [
-        {
-             "source": "server.js",
-              "destination": "/server.js"
-         }
-         ] 
+     "name":"video_sharer_server",
+     "builds":[{"src":"server.js","use":"@vercel/node"}],
+     "routes":[{"src":"/(.*)","dest":"/server.js"}]
+     
 }
